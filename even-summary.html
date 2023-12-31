@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js DOm Summary</title>
+</head>
+<body>
+
+
+    <h1>Final DOM even Handler</h1>
+
+    <p id="p">Default paragraph taxt</p>
+    <input id="input" type="text">
+    <button id="update">Update</button>
+    <br>
+    <br>
+    <h3 id="handle-status">Default-text</h3>
+    <button onclick="handleOnClick()">Handle even by add one click function</button>
+    <button id="addEvenListener">Handle even by addEvenListenar</button>
+</body>
+
+<script>
+    // option - 1
+    function handleOnClick(){
+         const handleStatus = document.getElementById('handle-status');
+         handleStatus.innerText = 'HAndle by function'
+    }
+//option 2 
+    document.getElementById('addEvenListener').addEventListener('click' , function(){
+        const status  = document.getElementById('handle-status');
+        status.innerText = 'i will change by add even listener'
+    })
+
+    // option 2 another 
+    document.getElementById('update').addEventListener('click' , function(){
+        const inputF = document.getElementById('input') ;
+       const valueAdd = inputF.value ;
+       const p = document.getElementById('p') ;
+       p.innerText = valueAdd;
+       inputF.value= ''
+    })
+</script>
+</html>

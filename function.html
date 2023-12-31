@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('subscribe')">click me</button>
+    <button onclick="makeChng()">change the text</button>
+    
+    <button onclick=" Todaydate()">What's time now?</button>
+    <p id="p1"></p>
+    <script>
+        function makeChng(){
+            document.write('change the past text and editing new text')
+        }
+        function Todaydate(){
+            document.getElementById('p1').innerHTML = Date()
+        }
+    </script>
+</body>
+</html>
